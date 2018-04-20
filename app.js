@@ -16,5 +16,15 @@ client.on('message', message => {
            
 });
 
+client.on('message', message => {
+    if (message.content === 'Spam') {
+        message.author.sendMessage("please do not spam");
+    }else
+        
+    if (message === 'No') {
+        message.channel.sendMessage('you')
+    }
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
