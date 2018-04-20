@@ -21,7 +21,7 @@ client.on('message', message => {
         message.author.sendMessage("please do not spam");
     }else
         
-    if (message === 'No') {
+    if (message.content === 'No') {
         message.channel.sendMessage('you');
     }
 });
