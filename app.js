@@ -26,5 +26,15 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === "+help") {
+        message.channel.sendMessage('not enough commands yet');
+    }else
+      
+    if (message.content === "+roast ryan") {
+        message.channel.sendMessage('idk ummm ryan has autism lol');
+    }
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
