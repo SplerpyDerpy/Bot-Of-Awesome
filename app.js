@@ -11,10 +11,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 
-
-
-
-
+var input = message.content.toUpperCase();
 
 
 
@@ -75,6 +72,10 @@ client.on('message', message => {
 
 });
 
+if(input === '!help') {
+    message.channel.send('no')
+}
+});
 
 
 client.on("message", async message => {
