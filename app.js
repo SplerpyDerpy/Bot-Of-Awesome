@@ -7,55 +7,18 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 const prefix = ".t"
-
-
-
-
-client.on("message", (message) => {
-    if(message.content.startsWith(prefix))
-       return;
-    if(message.content.startsWith(prefix + "help")) {
-       message.channel.send("not enough commands for this yet");
-} else
-    if(message.content.startWith(prefix + "say")) {
-        const input = message.content.slice(prefix)
-            const sayMessage = input.join(" ");
-
-    message.delete().catch(hmm=>{});
-
-    message.channel.send(sayMessage);
-    }
-});
         
-         
-        
-    
-
+      
 
 client.on('ready', () => {
-
-
-
     console.log('I am ready!');
 
-
-
 });
-
-
-
-
 
 
 
 client.on('message', message => {
-
-
-
     if (message.content === 'ping') {
-
-
-
     	message.reply('pong');
 
 
@@ -87,6 +50,22 @@ client.on('message', message => {
 
     }
 
+});
+
+client.on("message", (message) => {
+    if(message.content.startsWith(prefix)) {
+       return;}
+    if(message.content.startsWith(prefix + "help")) {
+       message.channel.send("not enough commands for this yet");
+} else
+    if(message.content.startWith(prefix + "say")) {
+        const input = message.content.slice(prefix)
+            const sayMessage = input.join(" ");
+
+    message.delete().catch(hmm=>{});
+
+    message.channel.send(sayMessage);
+    }
 });
 
 
