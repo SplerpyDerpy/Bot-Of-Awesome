@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
+var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 
 
 client.on('ready', () => {
@@ -37,6 +38,7 @@ client.on('message', message => {
         message.channel.sendMessage('idk ummm ryan has autism lol');
     }
 });
+    
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
