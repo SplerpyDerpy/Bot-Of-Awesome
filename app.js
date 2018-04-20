@@ -6,7 +6,6 @@ const client = new Discord.Client();
 
 const config = require("./config.json");
 
-const prefix = ".t";
         
       
 
