@@ -44,7 +44,7 @@ if(command === "say") {
     message.delete().catch(hmm=>{});
     message.channel.send(sayMessage);
 }
-
+});
 
 // THIS  MUST  BE  THIS  WAY
 
