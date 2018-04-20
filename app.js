@@ -23,6 +23,12 @@ client.on('message', message => {
 
 });
 
+client.pm('message', message => {
+    if (message.content === 'oof') {
+        message.channel.send('bidoof')
+    }
+});
+
 
 
 // THIS  MUST  BE  THIS  WAY
