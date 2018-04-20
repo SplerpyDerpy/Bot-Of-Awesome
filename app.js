@@ -6,13 +6,12 @@ const client = new Discord.Client();
 
 const config = require("./config.json");
 
-const prefix = ".t"
+const prefix = ".t";
         
       
 
 client.on('ready', () => {
     console.log('I am ready!');
-
 });
 
 
@@ -20,14 +19,9 @@ client.on('ready', () => {
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
-
-
-
   	}
-
-
-
 });
+
 
 client.on('message', message => {
     if (message.content === 'Bidoof') {
