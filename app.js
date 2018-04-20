@@ -48,7 +48,8 @@ client.on('message', message => {
 
 client.on("message", (message) => {
     if(message.content.startsWith(prefix)) {
-       return;}
+       return;
+    }
     if(message.content.startsWith(prefix + "help")) {
        message.channel.send("not enough commands for this yet");
 } else
