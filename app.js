@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = "+";
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -27,7 +28,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === "+help") {
+    if (message.content.startsWith(prefix + "help")) {
         message.channel.sendMessage('not enough commands yet');
     }else
       
