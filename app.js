@@ -6,6 +6,8 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.on("message", async message => {
+
  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
  const command = args.shift().toLowerCase();
 
@@ -45,6 +47,7 @@ client.on('message', message => {
     if (message.content.startsWith(config.prefix + "roast ryan")) {
         message.channel.sendMessage('idk ummm ryan has autism lol');
     }
+});
 });
 
 // THIS  MUST  BE  THIS  WAY
