@@ -6,6 +6,9 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+ const args = message.content.slice(prefix.length).trim().split(/ +/g);
+ const command = args.shift().toLowerCase();
+
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
