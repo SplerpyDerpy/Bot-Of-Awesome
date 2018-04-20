@@ -58,6 +58,11 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if (message.content = 'spam') {
+        message.author.sendMessage('do not spam and if you typed spam for some other reason then you are an intellect')
+    }
+});
 
 
 client.on('message', message => {
