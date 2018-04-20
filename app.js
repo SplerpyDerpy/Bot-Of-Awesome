@@ -32,7 +32,7 @@ client.on('message', message => {
         message.channel.sendMessage('not enough commands yet');
     }else
       
-    if (message.content === "+roast ryan") {
+    if (message.content.startsWith(prefix + "roast ryan")) {
         message.channel.sendMessage('idk ummm ryan has autism lol');
     }
 });
