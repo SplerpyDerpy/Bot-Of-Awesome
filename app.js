@@ -52,6 +52,12 @@ client.on('message', message => {
 
 });
 
+client.on('message', message => {
+    if (message.content === 'Bidoof') {
+        message.channel.send('oof')
+    }
+});
+
 
 
 client.on('message', message => {
