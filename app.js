@@ -22,7 +22,7 @@ client.on('message', message => {
     }else
         
     if (message === 'No') {
-        message.channel.sendMessage('you')
+        message.channel.sendMessage('you');
     }
 });
 
