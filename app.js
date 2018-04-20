@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "+";
+const config = require("./config.json");
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -32,11 +32,11 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "help")) {
+    if (message.content.startsWith(config.prefix + "help")) {
         message.channel.sendMessage('not enough commands yet');
     }else
       
-    if (message.content.startsWith(prefix + "roast ryan")) {
+    if (message.content.startsWith(config.prefix + "roast ryan")) {
         message.channel.sendMessage('idk ummm ryan has autism lol');
     }
 });
