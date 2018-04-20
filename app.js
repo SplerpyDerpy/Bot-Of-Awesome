@@ -18,6 +18,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if(message.author.bot) {
+        return;
+    }
+});
+
+client.on('message', message => {
     if (message.content === 'Spam') {
         message.author.sendMessage("please do not spam");
     }else
