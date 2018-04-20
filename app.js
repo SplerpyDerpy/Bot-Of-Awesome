@@ -2,14 +2,34 @@
 
 const Discord = require('discord.js');
 
-
-
 const client = new Discord.Client();
-
-
 
 const config = require("./config.json");
 
+const prefix = ".t"
+
+const args = message.content.slice(prefix).trim().split(/ +/g);
+
+
+
+client.on("message", (message) => {
+    if(message.content.startsWith(prefix))
+       return;
+    if(message.content.startsWith(prefix + "help")){
+       message.channel.send("no!");
+} else
+    if(message.content.startWith(prefix + "say")){
+            const sayMessage = args.join(" ");
+
+    message.delete().catch(hmm=>{});
+
+    message.channel.send(sayMessage);
+    }
+})
+        
+         
+        
+    
 
 
 client.on('ready', () => {
