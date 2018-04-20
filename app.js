@@ -6,9 +6,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
- const args = message.content.slice(prefix.length).trim().split(/ +/g);
- const command = args.shift().toLowerCase();
-
 client.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('pong');
@@ -21,10 +18,11 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if(message.author.bot) {
-        return;
-    }
-});
+    if(message.author.bot) return;
+
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+
 
 client.on('message', message => {
     if (message.content === 'Spam') {
@@ -45,6 +43,8 @@ client.on('message', message => {
         message.channel.sendMessage('idk ummm ryan has autism lol');
     }
 });
+}
+          });
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
