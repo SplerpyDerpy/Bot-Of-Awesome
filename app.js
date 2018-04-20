@@ -22,6 +22,13 @@ client.on('message', message => {
 
 });
 
+client.on('message', message => {
+    if (message.content === 'oof') {
+        message.reply('bidoof');
+    }
+})
+
+
 client.on("message", async message => {
 
   // This event will run on every single message received, from any channel or DM.
