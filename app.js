@@ -8,7 +8,6 @@ const config = require("./config.json");
 
 const prefix = ".t"
 
-const args = message.content.slice(prefix).trim().split(/ +/g);
 
 
 
