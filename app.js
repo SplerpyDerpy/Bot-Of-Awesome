@@ -21,8 +21,8 @@ client.on('message', message => {
         message.author.sendMessage("please do not spam");
     }else
         
-    if (message.content === 'No') {
-        message.channel.sendMessage('you');
+    if (message.content === 'Ur mum gay') {
+        message.channel.sendMessage('no u');
     }
 });
 
