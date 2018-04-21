@@ -8,17 +8,17 @@ client.on('ready', () => {
 
 client.on("message", async message => {
     if (message.author.bot) return;
-    if (message.content.toUpperCase() === 'Oof') {
+    if (message.content.toUpperCase() === 'OOF') {
         message.channel.send('bidoof');
     }
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     
-    if (message.content.toUpperCase() === 'Ur mum gay') {
+    if (message.content.toUpperCase() === 'UR MUM GAY') {
         message.channel.sendMessage("no u");
     }else    
         
-    if (message.content.toUpperCase() === 'Spam') {
+    if (message.content.toUpperCase() === 'SPAM') {
         message.author.sendMessage('do not spam');
     }
     if (command === 'say') {
