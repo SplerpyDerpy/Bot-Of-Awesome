@@ -30,6 +30,16 @@ client.on('message', message => {
     if (command === 'roast') {
         message.channel.sendMessage("ummm " + message.mentions.members.first() + " is gay lol");
     }
+    
+    if (command === 'giveD') {
+        if(!message.member.roles.some(r=>["Admin", "Dragon Gym Leader"].includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this!");
+        if(message.mention.member.first().roles.has("name", "Dragon Badge"))
+            return message.channel.sendMessage("already has this badge");
+        let role = message.guild.roles.find("name", "Dragon Badge");
+        let member = message.mention.member.first();
+        member.addRole(role).catch(console.error);
+        
    
 });
     
