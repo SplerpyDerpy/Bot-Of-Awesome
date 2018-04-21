@@ -21,6 +21,12 @@ client.on('message', message => {
     if (message.content === 'Spam') {
         message.author.sendMessage('do not spam');
     }
+    if (command === 'say') {
+        const sayMessage = args.join(" ");
+        message.delete().catch('hmm');
+        message.channel.sendMessage(sayMessage);
+    }
+        
 });
     
 
