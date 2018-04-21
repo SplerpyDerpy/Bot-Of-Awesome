@@ -23,8 +23,11 @@ client.on('message', message => {
     }
     if (command === 'say') {
         const sayMessage = args.join(" ");
-        message.delete().catch('hmm');
+        message.delete().catch(O_o=>{});
         message.channel.sendMessage(sayMessage);
+    }
+    if (command === 'roast') {
+        message.channel.sendMessage("ummm" + message.mentions.members.first() + "is gay lol");
     }
         
 });
