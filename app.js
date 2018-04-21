@@ -39,6 +39,7 @@ client.on('message', message => {
         let role = message.guild.roles.find("name", "Dragon Badge");
         let member = message.mention.member.first();
         member.addRole(role).catch(console.error);
+    }
         
    
 });
