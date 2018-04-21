@@ -2,12 +2,12 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 
-client.on("message", async message => {
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
+
+client.on("message", async message => {
     if (message.author.bot) return;
     if (message.content === 'Oof') {
         message.channel.send('bidoof');
