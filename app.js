@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 
+client.on("message", async message => {
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -41,7 +42,7 @@ client.on('message', message => {
         member.addRole(role).catch(console.error);
     }
         
-   
+});   
 });
     
 
