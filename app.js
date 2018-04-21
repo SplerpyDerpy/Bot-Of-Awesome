@@ -1,41 +1,25 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
-var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
-    }else
-            
+    if (message.author.bot) return;
     if (message.content === 'Oof') {
-        message.channel.sendMessage('bidoof');
+        message.channel.send('bidoof');
     }
-           
-});
-
-client.on('message', message => {
-    if (message.content === 'Spam') {
-        message.author.sendMessage("please do not spam");
-    }else
-        
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    
     if (message.content === 'Ur mum gay') {
-        message.channel.sendMessage('no u');
-    }
-});
-
-client.on('message', message => {
-    if (message.content.startsWith(config.prefix + "help")) {
-        message.channel.sendMessage('not enough commands yet');
-    }else
-      
-    if (message.content.startsWith(config.prefix + "roast ryan")) {
-        message.channel.sendMessage('idk ummm ryan has autism lol');
+        message.channel.sendMessage("no u");
+    }else    
+        
+    if (message.content === 'Spam') {
+        message.author.sendMessage('do not spam');
     }
 });
     
